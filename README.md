@@ -27,7 +27,7 @@ Superpositon, is the ability for a qubit to be in both positions at once. For ex
 I will be doing my best to show you all how to get started using the Quantum Information Science Kit, to the best of my ability. I am not part of the IBM team in any way whatsoever, nor do I professionally program quantum computers. This is strictly a hobby of mine, and I hope that what I have to share will be interesting to you :)
 
 ### What will I need in order to follow along?
-
+I will be doing my work on a Virtual Machine, as I find Ubuntu is best to run this toolkit, and this is not my distro of choice. However you do it, I do advice a ubuntu machine. Aside from that,
 
 Happy Hunting, 
 Cerulean
