@@ -9,6 +9,8 @@ Quantum Computers, are a rather new development in technology, and are still qui
 
 ### What are Qubits?
 
+If you are interested in learning more about how qubits, and quantum processors actually function, check out this video.
+
 ### What is Entanglement?
 
 ### What will we be doing in these tutorials?
