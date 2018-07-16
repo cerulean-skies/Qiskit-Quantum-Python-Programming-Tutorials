@@ -18,7 +18,7 @@ https://youtu.be/_P7K8jUbLU0
 Entanglement, is an extremely strong bond between two Qubits. When qubits are entangled, one qubit can be examined lightyears away from the other, and they will always retain their bond. Flip a an entangled cubit facing up from down, and its partner wil react, no matter the distance. This is also being studied for high speed, long distance data comunication.
 
 ### What is Superposition?
-Superpositon, is the ability for a qubit to be in both positions at once. For example, where a computer would have two bits, these bits can represent 00, 11, 01, and 10. In a quantum computer, 2 qubits can represent each of these states at one time, thanks to superposition.
+Superpositon, is the ability for a qubit to be in both positions at once. For example, where a computer would have two bits, these bits can represent '00', '11', '01', and '10'. In a quantum computer, 2 qubits can represent each of these states at one time, thanks to superposition.
 
 ### What will we be doing in these tutorials?
 
