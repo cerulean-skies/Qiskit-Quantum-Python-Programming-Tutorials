@@ -33,7 +33,7 @@ qc.h(qr[3]) #Place Qubit 3 into a state of Superposition.
 qc.cx(qr[3],qr[2]) #Entangle Cubit 3's fate with Qubit 2.
 qc.cx(qr[2],qr[1]) #Entangle Cubit 2's fate with Qubit 1.
 qc.cx(qr[1],qr[0]) #Entangle Cubit 1's fate with Qubit 0.
-
+ 
 qc.cx(qr[3],qr[4]) #Entangle Cubit 3's fate with Qubit 4. This is key to the equation.
 
 # Now we have entangled and superimposed to our hearts content, it is time to measure our qubits, as when in superposition, 
