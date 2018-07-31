@@ -40,22 +40,8 @@ qc.cx(qr[3],qr[4]) #Entangle Cubit 3's fate with Qubit 4. This is key to the equ
 # the data corresponds to both answers, and we need finite solutions. 
 # Measuring our qubits will force them to decide their nature, a '1', or a '0'.
 
-qc.measure(qr[0], cr[0])
-qc.measure(qr[1], cr[1])
-qc.measure(qr[2], cr[2])
-qc.measure(qr[3], cr[3])
-qc.measure(qr[4], cr[4])
-qc.measure(qr[5], cr[5])
-qc.measure(qr[6], cr[6])
-qc.measure(qr[7], cr[7])
-qc.measure(qr[8], cr[8])
-qc.measure(qr[9], cr[9])
-qc.measure(qr[10], cr[10])
-qc.measure(qr[11], cr[11])
-qc.measure(qr[12], cr[12])
-qc.measure(qr[13], cr[13])
-qc.measure(qr[14], cr[14])
-qc.measure(qr[15], cr[15])
+for r in range(16):
+    qc.measure(qr[r], cr[r])
 
 # Here we will execute our quantum program, on either a live machine, or in the simulator. Shots can be adjusted, as well as backend,
 # though timeout should never be reduced. Data will be stored into variables, and then printed to terminal for visual confirmation.
