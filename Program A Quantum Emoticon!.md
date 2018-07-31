@@ -81,9 +81,8 @@ qc.x(qr[12])
 qc.x(qr[13])
 
 
-#Now, the differences between '01010000',meaning 'O' and '01001111', meaning 'P' are = 010*****, where asterisks are variable.
-#To accomplish this in our function, we will need to superimpose some of these bits using A Hadamard Gate, as well as a series of
-# CNOT Gates.
+Now, the differences between '01010000',meaning 'O' and '01001111', meaning 'P' are = 010*****, where asterisks are variable.To accomplish this in our function, we will need to superimpose some of these bits using A Hadamard Gate, as well as a series of CNOT Gates.
+
 qc.h(qr[3]) #Place Qubit 3 into a state of Superposition.
 qc.cx(qr[3],qr[2]) #Entangle Cubit 3's fate with Qubit 2.
 qc.cx(qr[2],qr[1]) #Entangle Cubit 2's fate with Qubit 1.
@@ -91,9 +90,7 @@ qc.cx(qr[1],qr[0]) #Entangle Cubit 1's fate with Qubit 0.
 
 qc.cx(qr[3],qr[4]) #Entangle Cubit 3's fate with Qubit 4. This is key to the equation.
 
-# Now we have entangled and superimposed to our hearts content, it is time to measure our qubits, as when in superposition, 
-# the data corresponds to both answers, and we need finite solutions. 
-# Measuring our qubits will force them to decide their nature, a '1', or a '0'.
+Now we have entangled and superimposed to our hearts content, it is time to measure our qubits, as when in superposition, the data corresponds to both answers, and we need finite solutions. Measuring our qubits will force them to decide their nature, a '1', or a '0'.
 
 qc.measure(qr[0], cr[0])
 qc.measure(qr[1], cr[1])
@@ -112,16 +109,14 @@ qc.measure(qr[13], cr[13])
 qc.measure(qr[14], cr[14])
 qc.measure(qr[15], cr[15])
 
-# Here we will execute our quantum program, on either a live machine, or in the simulator. Shots can be adjusted, as well as backend,
-# though timeout should never be reduced. Data will be stored into variables, and then printed to terminal for visual confirmation.
+Here we will execute our quantum program, on either a live machine, or in the simulator. Shots can be adjusted, as well as backend, though timeout should never be reduced. Data will be stored into variables, and then printed to terminal for visual confirmation.
 
 returned = qp.execute(["Quantum_Emoticon"], backend='ibmq_qasm_simulator', shots=1024, timeout=600)
 bitStrings = returned.get_counts("Quantum_Emoticon")
 
 print(str(bitStrings))
 
-# For each string in 'Bitsrings' We will convert first 8 bits of data to a single ASCII character, stored in a variable,
-# and do the same for the final 8 bits.
+For each string in 'Bitsrings' We will convert first 8 bits of data to a single ASCII character, stored in a variable, and do the same for the final 8 bits.
 StringDictionary = {}
 for bits in bitStrings:
     char1 = chr(int( bits[0:8] ,2))
@@ -129,13 +124,13 @@ for bits in bitStrings:
     StringDictionary[ char1 + char2 ] = bitStrings[bits] / 1024
 
 
-# Finally, we will graphically plot the output, so as to get a nice visual on what is happening. The combatting characters will be overlayed
-# on top of each other, according to how often they crop up in our returned data.
+Finally, we will graphically plot the output, so as to get a nice visual on what is happening. The combatting characters will be overlayed on top of each other, according to how often they crop up in our returned data.
+
 plt.rc('font', family='monospace')
 for char in StringDictionary.keys():
     plt.annotate( char, (0.5,0.5), va="center", ha="center", color = (0,0,0,StringDictionary[char]), size = 250)
 plt.axis('off')
 plt.show()
 
-# Backend can be changed to (backend='ibmqx5') to run on a real quantum device at IBM Headquarters, though this will use your credits,
+Backend can be changed to (backend='ibmqx5') to run on a real quantum device at IBM Headquarters, though this will use your credits,
 and all testing should be done within the simulator.
